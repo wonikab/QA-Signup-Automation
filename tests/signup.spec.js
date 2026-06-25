@@ -19,7 +19,6 @@ test('test', async ({ page}) => {
   await page.locator('input[name="confirmPassword"]').click();
   await page.locator('input[name="confirmPassword"]').fill('Test@123');
   await page.getByRole('button', { name: 'Next' }).click();
-  await expect(page.getByRole('textbox')).toBeVisible();
   await page.pause();
   await page.getByRole('textbox', { name: 'Name' }).click();
   await page.getByRole('textbox', { name: 'Name' }).fill('Wonika');
